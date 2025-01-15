@@ -5,6 +5,9 @@ Used as a tool to learn Qt tools for C++
 
 This tool provides the user with the ability to create the desired amount of subnets from a network address and mask
 
+### Dependencies
+* Qt5 or higher
+
 ### Building with CMake
 From root directory
 ```
