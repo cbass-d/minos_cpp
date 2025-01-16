@@ -168,7 +168,8 @@ namespace util {
         auto ip_decimal { ipToDecimal(address) };
 
         int new_subnetbits = network_bits + subnet_bits;
-        int subnet_hosts = std::pow(2, 32 - new_subnetbits);
+        int increment = std::pow(2, 32 - new_subnetbits);
+        int subnet_hosts = increment - 2;
 
         std::string mask_binary { "" };
         int network_bits_tmp { network_bits - 1 };
@@ -191,7 +192,7 @@ namespace util {
                 last_address = new_address_decimal;
             }
             else {
-                auto new_address_decimal = last_address + subnet_hosts;
+                auto new_address_decimal = last_address + increment;
                 last_address = new_address_decimal;
             }
 

@@ -13,3 +13,10 @@ From root directory
 ```
 $ cmake -S . -B {target build directory path}
 ```
+
+#### To-do
+* Add visiual representation of bits
+* Optimize creation of subnets
+
+#### Issues
+* Program crashes when wanting to create more than ~8k subnets
